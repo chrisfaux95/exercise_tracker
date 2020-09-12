@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css"
-        integrity="sha384-L7+YG8QLqGvxQGffJ6utDKFwmGwtLcCjtwvonVZR/Ba2VzhpMwBz51GaXnUsuYbj" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>Fitness Chart</title>
-</head>
-
-<body>
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-dark bg-primary">
-        <a href="/" class="navbar-brand">Fitness Tracker</a>
-    </nav>
-
-    <!-- MAIN BODY -->
-    <main class="container">
-        <h1 class="text-center">Dashboard:
-        </h1>
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="canvas1"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="canvas2"></canvas>
-            </div>
+  </head>
+  <nav>
+    <a href="/">Fitness Tracker</a>
+  </nav>
+  <body>
+    <div class="container mt">
+      <h1 class="text-center">Workout Dashboard</h1>
+      <div class="row mt">
+        <div class="col-md-6">
+          <canvas id="canvas"></canvas>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="canvas3"></canvas>
-            </div>
-            <div class="col-md-6">
-                <canvas id="canvas4"></canvas>
-            </div>
+        <div class="col-md-6">
+          <canvas id="canvas2"></canvas>
         </div>
-    </main>
-
-    <!-- IMPORTED SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script src="./assets/js/api.js"></script>
-    <script src="./assets/js/stats.js"></script>
-
-    <!-- DEFAULT IMPORTED SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+      </div>
+      <div class="row mt">
+        <div class="col-md-6">
+          <canvas id="canvas3"></canvas>
+        </div>
+        <div class="col-md-6">
+          <canvas id="canvas4"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/stats.js"></script>
+  </body>
 </html>
