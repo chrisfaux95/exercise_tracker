@@ -15,11 +15,13 @@ router.get("/api/workouts", (req, res) => {
 
 
 router.get("/api/workouts/range", (req, res) => {
-    let timeRange = new Date().setDate(new Date().getDate() - 10);
+    let now = new Date();
+    let timeRange = new Date().setDate(now.getDate() - 11)
+    console.log(timeRange.toString());
     db.Workout.find({
-        date: { $lte: timeRange }
+        date: { $gte: timeRange }
     }).then(dbExercise => {
-        // console.log(dbExercise);
+        console.log(dbExercise);
         res.json(dbExercise);
     }).catch(err => {
         res.status(400).json(err)
