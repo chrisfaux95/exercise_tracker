@@ -48,7 +48,11 @@ router.put("/api/workouts/:id", (req, res) => {
 
 
 router.delete("/api/workouts", (req, res) => {
-    db.Workout.deleteOne({});
+    db.Workout.findByIdAndDelete(req.body.id).then(
+        () => { res.json(true) }
+    ).catch(err => {
+        res.status(400).json(err);
+    })
 });
 
 
