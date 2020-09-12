@@ -1,20 +1,12 @@
-const path = require("path")
+const path = require("path");
+const router = require("express").Router();
 
-var htmlRoutes = app => {
-    // ROUTE TO EXERCISE INPUT FORM PAGE
-    app.get("/exercise", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/exerise.html"))
-    });
+router.get("/exercise", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/exercise.html"));
+});
 
-    // ROUTE TO GET STATS PAGE
-    app.get("/stats", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/stats.html"));
-    })
+router.get("/stats", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/stats.html"));
+});
 
-    // ROUTE TO HOME PAGE
-    app.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/index.html"));
-    });
-}
-
-module.exports = htmlRoutes;
+module.exports = router;
