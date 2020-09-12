@@ -26,8 +26,8 @@ mongoose.connect(dbConnection, {
 });
 
 // ADDING THE SERVER ROUTES
-app.use("/api", require("./routes/api-routes.js"));
-app.use("/", require("./routes/html-routes.js"));
+app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/html-routes.js"));
 
 // RETURNING THE PORT IT IS ON
 app.listen(PORT, () => {
