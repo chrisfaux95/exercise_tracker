@@ -6,12 +6,6 @@ router.get("/api/workouts", (req, res) => {
     db.Workout.find({}).sort({
         date: -1
     }).then(dbExercise => {
-        // I DON'T KNOW WHAT'S HAPPENING HERE.
-        // USING THE RESULT SENDS AN ERROR
-        // THE FOLLOWING LINE BREAKS IT
-        // let s = JSON.stringify(dbExercise);
-        console.log(dbExercise);
-        // console.log(s);
         res.json(dbExercise);
     }).catch(err => {
         console.log(err);
