@@ -2,7 +2,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-// const path = require('path')
+const path = require('path')
 
 // CREATING THE EXPRESS APP, AND USING A PORT
 var app = express();
