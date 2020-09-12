@@ -13,8 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // ADDING THE SERVER ROUTES
 // ADDING THE SERVER ROUTES
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+app.use("/api", require("./routes/api-routes.js"));
+app.use("/", require("./routes/html-routes.js"));
 
 // RETURNING THE PORT IT IS ON
 app.listen(PORT, () => {
